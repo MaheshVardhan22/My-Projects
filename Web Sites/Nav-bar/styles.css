@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.heading{
+    background-color: rgb(176, 255, 229);
+    padding: 20px;
+    width: 100vw;
+    height: 20px;
+    position: fixed;
+    top: 0;
+}
+.head{
+    margin-top: 15vh;
+}
+.options{
+    display: flex;
+}
+li{
+    list-style: none;
+    margin: 0px 10px;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    cursor: pointer;
+    color: rgb(5, 201, 136);
+    transition: calc(0.75s);
+}
+h1{
+    margin: 10px;
+}
+p{
+    margin: 20px;
+}

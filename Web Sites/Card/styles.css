@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    bottom: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Sans-Serif;
+    background-color: rgb(214, 214, 214);;
+    
+}
+.card{
+    width: 25vw;
+    height: 85vh;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px;
+}
+.pht{
+    height: 200px;
+    width: 25vw;
+    display: block;
+    position:static;
+    border-radius: 20px;
+}
+.specks{
+    box-shadow: 0 0 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 7.5px;
+    padding: 2px 5px;
+    display: inline-block;
+    border-radius: 20px;
+    color: rgb(89, 89, 89);
+    font-size: 10px;
+}
+.graph{
+    color: rgb(192, 192, 192);
+}
+.heading{
+    margin-top: 5px;
+}
+.btn{
+    height: 7.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card > .btn > button{
+    background-color: rgb(188, 216, 244);
+    padding: 8px;
+    border-radius: 10px;
+    color: rgb(0, 64, 128);
+    font-size: 10px;
+    border: 0;
+    font-weight: bold;
+}
+.card > .btn > button:hover{
+    cursor: pointer;
+    background-color: rgb(38, 146, 254);
+    transition: calc(1s);
+}

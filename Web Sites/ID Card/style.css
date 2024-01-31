@@ -1,0 +1,52 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+.divElemnet{
+    height: 200px;
+    width: 140px;
+    border: 10px solid rgba(170, 170, 170, 0.286);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(100, 100, 100, 0.388);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+    display: inline-block;
+}
+.divElemnet .photo{
+    max-width: 50%;
+    height: auto;
+    border-radius: 0%;
+    margin-bottom: 10px;
+}
+.divElemnet .text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: large;
+}
+.divElemnet .text2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(129, 129, 129);
+    font-size: small;
+}
+
+.divElemnet button {
+    background-color: rgb(50, 131, 217);
+    color: white;
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ .divElemnet button:hover{
+    background-color:  rgb(96, 165, 240);
+    
+}

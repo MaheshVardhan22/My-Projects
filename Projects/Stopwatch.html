@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+  text-align: center;
+  margin: 20px;
+}
+
+.stopwatch, .timer {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+
+  </style>
+</head>
+<body>
+ <div class="container">
+    <h1>Stopwatch</h1>
+    <div class="stopwatch display-4">00:00:00</div>
+    <button class="btn btn-primary" onclick="startStopwatch()">Start</button>
+    <button class="btn btn-secondary" onclick="stopStopwatch()">Stop</button>
+    <button class="btn btn-danger" onclick="resetStopwatch()">Reset</button>
+  </div>
+
+  <div class="container">
+    <h1>Countdown Timer</h1>
+    <div class="timer display-4">00:00:00</div>
+    <input type="number" id="minutes" placeholder="Enter minutes" class="form-control">
+    <button class="btn btn-primary" onclick="startCountdown()">Start Countdown</button>
+  </div>
+
+
+  <script>
+    let stopwatchInterval;
+let countdownInterval;
+
+let stopwatchTime = 0;
+let countdownTime = 0;
+
+function startStopwatch() {
+  stopwatchInterval = setInterval(() => {
+    stopwatchTime++;
+    displayStopwatchTime();
+  }, 1000);
+}
+
+function stopStopwatch() {
+  clearInterval(stopwatchInterval);
+}
+
+function resetStopwatch() {
+  clearInterval(stopwatchInterval);
+  stopwatchTime = 0;
+  displayStopwatchTime();
+}
+
+function displayStopwatchTime() {
+  const hours = Math.floor(stopwatchTime / 3600);
+  const minutes = Math.floor((stopwatchTime % 3600) / 60);
+  const seconds = stopwatchTime % 60;
+
+  document.querySelector('.stopwatch').innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+function startCountdown() {
+  const minutesInput = document.getElementById('minutes');
+  const minutes = parseInt(minutesInput.value);
+  if (isNaN(minutes) || minutes < 0) {
+    alert('Please enter a valid number of minutes.');
+    return;
+  }
+  countdownTime = minutes * 60;
+
+  countdownInterval = setInterval(() => {
+    if (countdownTime > 0) {
+      countdownTime--;
+      displayCountdownTime();
+    } else {
+      clearInterval(countdownInterval);
+      alert('Countdown finished!');
+    }
+  }, 1000);
+}
+
+function displayCountdownTime() {
+  const hours = Math.floor(countdownTime / 3600);
+  const minutes = Math.floor((countdownTime % 3600) / 60);
+  const seconds = countdownTime % 60;
+
+  document.querySelector('.timer').innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+  </script>
+</body>
+</html>

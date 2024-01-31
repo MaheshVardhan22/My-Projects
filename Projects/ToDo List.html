@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple-style Todo List</title>
+<style>
+    body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.input-group {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Todo List</h1>
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a new task">
+        <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    let taskList = document.getElementById('taskList');
+
+function addTask() {
+  let taskInput = document.getElementById('taskInput');
+  let taskText = taskInput.value;
+
+  if (taskText.trim() === '') {
+    return;
+  }
+
+  let taskItem = document.createElement('li');
+  taskItem.textContent = taskText;
+
+  let deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.classList.add('delete-btn');
+  deleteButton.addEventListener('click', function() {
+    taskList.removeChild(taskItem);
+  });
+
+  taskItem.appendChild(deleteButton);
+  taskItem.addEventListener('click', toggleTask);
+  taskList.appendChild(taskItem);
+
+  taskInput.value = '';
+}
+
+function toggleTask(event) {
+  event.target.classList.toggle('completed');
+}
+
+</script>
+</body>
+</html>

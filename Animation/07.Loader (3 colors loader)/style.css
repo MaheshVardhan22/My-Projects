@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:black
+}
+.load{
+    color: rgb(137, 136, 136);
+    font-size: small;
+    position: absolute;
+    margin-left: 5px;
+}
+div{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border-top: 3px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: load 1s linear infinite;
+}
+@keyframes load{
+    33%{
+        transform: rotate(120deg);
+        border-top-color:yellow;
+    }
+    66%{
+        transform: rotate(240deg);
+        border-top-color: green;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

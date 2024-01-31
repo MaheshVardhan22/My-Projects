@@ -1,0 +1,52 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.div-1{
+  height: 10px;
+  width: 10px;
+  position: fixed;
+  animation: rotate 1.5s ease-in-out infinite;
+}
+.circle-1, .circle-2, .circle-3, .circle-4{
+  height: 7px;
+  width: 7px;
+  position: fixed;
+  border-radius: 50%;
+}
+.circle-1{
+  left: -0.5em;
+  top: -0.5em;
+  background-color: rgb(69, 246, 255);
+}
+.circle-2{
+  right: -0.5em;
+  top: -0.5em;
+  background-color: rgb(255, 165, 62);
+}
+.circle-3{
+  left: -0.5em;
+  bottom: -0.5em;
+  background-color: rgb(173, 67, 255);
+}
+.circle-4{
+  right: -0.5em;
+  bottom: -0.5em;
+  background-color: rgb(255, 63, 185);
+}
+
+@keyframes rotate{ 
+  50%{
+    width: 0.2px;
+    height: 0.2px;
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}

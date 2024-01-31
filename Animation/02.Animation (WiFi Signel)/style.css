@@ -1,0 +1,57 @@
+.section-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.div-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgb(113, 113, 113);
+}
+.div-1 .s1{
+    height: 5px;
+    width: 5px;
+    background-color: white;
+    margin: 2px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 1px #000000;
+    animation: signel1 2s linear 0s infinite
+    ;
+}
+.div-1 .s2{
+    height: 10px;
+    width: 5px;
+    background-color: white;
+    margin: 2px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 1px black;
+    animation: signel1 2s linear 1s infinite;
+}
+.div-1 .s3{
+    height: 15px;
+    width: 5px;
+    background-color: white;
+    margin: 2px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 1px black;
+    animation: signel1 2s linear 2s infinite;
+}
+.div-1 .s4{
+    height: 20px;
+    width: 5px;
+    background-color: white;
+    margin: 2px;
+    box-shadow: 0px 0px 1px black;
+    animation: signel1 2s linear 3s infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+@keyframes signel1{
+    100%{
+        background-color: green
+    }
+}

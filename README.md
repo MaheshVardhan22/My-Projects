@@ -1,5 +1,4 @@
-Hello 
-here i am creating some of web designs
+Hello, I am creating some of web designs
 1. Animations:It contain Some of animated designs like
     > page loadings
 2. Projects Assignments
